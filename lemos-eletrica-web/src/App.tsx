@@ -1,10 +1,13 @@
-import './App.css';
+import { ShowProducts } from './components/ShowProducts';
+import { ProductsProvider, useProducts } from './hooks/useProducts';
 
 function App() {
-  
+  const { products } = useProducts();
+
   return (
-    <div className="App">
-    </div>
+    <ProductsProvider>
+      <ShowProducts />
+    </ProductsProvider>
   );
 }
 
